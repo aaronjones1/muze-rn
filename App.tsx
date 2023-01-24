@@ -17,6 +17,20 @@ const SignInButton = () => {
   return <Button onPress={onPress} title='Sign in' />;
 };
 
+const SignOutButton = () => {
+  const { clearSession } = useAuth0();
+
+  const onPress = async () => {
+    try {
+      await clearSession();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return <Button onPress={onPress} title='Sign out' />;
+}
+
 export default function App() {
   return (
     <Auth0Provider
@@ -26,6 +40,7 @@ export default function App() {
       <View style={styles.container}>
         <Text>Muze</Text>
         <SignInButton />
+        <SignOutButton />
         <StatusBar style='auto' />
       </View>
     </Auth0Provider>
