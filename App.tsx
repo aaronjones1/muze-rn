@@ -1,3 +1,4 @@
+import 'expo-dev-client';
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { useAuth0, Auth0Provider } from 'react-native-auth0';

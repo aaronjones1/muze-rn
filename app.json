@@ -12,21 +12,26 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/31b83370-86af-498a-a060-b92bc494b88c"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.muze",
-      "supportsTablet": true
+      "bundleIdentifier": "com.astra.muze",
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      }
     },
     "android": {
-      "package": "com.muze",
+      "package": "com.astra.muze",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -38,6 +43,11 @@
           "domain": "dev-min73mnfgfs8ofzq.us.auth0.com"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "31b83370-86af-498a-a060-b92bc494b88c"
+      }
+    }
   }
 }
