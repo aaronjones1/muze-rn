@@ -26,10 +26,21 @@ const SignOutButton = () => {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return <Button onPress={onPress} title='Sign out' />;
-}
+};
+
+const ProfileBlurb = () => {
+  const { user } = useAuth0();
+
+  return (
+    <>
+      {user && <Text>Signed in as {user.name}.</Text>}
+      {!user && <Text>Please sign in.</Text>}
+    </>
+  );
+};
 
 export default function App() {
   return (
@@ -41,6 +52,7 @@ export default function App() {
         <Text>Muze</Text>
         <SignInButton />
         <SignOutButton />
+        <ProfileBlurb />
         <StatusBar style='auto' />
       </View>
     </Auth0Provider>
